@@ -1,0 +1,47 @@
+Scheduling Application for University of Massachusetts Dartmouth - Technical Services
+
+Objectives:
+	+Store employee information
+		- Student ID
+		- Employee ID
+		- Name
+			* First
+			* Last
+		- Position
+		- Phone Number
+		- Email
+		- Hire Date
+		- Expected Graduation
+		- Shirt Size
+		- Trainings Completed
+			* Basic Trainings
+				° Mobile Sound
+				° Mobile Lights
+				° Auditorium Sound (X32)
+				° Auditorium Lights
+				° Stage Safety
+				° Campus Center
+				° Woodlands
+				° Grand Reading Room
+				° Professionalism
+			* Advanced Trainings
+				° Sound Consoles
+				° Sound Design
+				° Amp and Speaker Matching
+				° Advanced Ion
+				° Lighting Design
+				° Networking
+				° Equipment Repair
+				° Scene Shop
+	+ Display Current Events
+		- Previous week's events
+		- Upcoming week's events
+	+ Create Meeting Invites
+		- Uses name of event
+		- Uses time of event
+		- Easily allows adding employees
+		- Ability to split events into multiple events
+
+							Good start for now. (19/05/2017)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
