@@ -1,7 +1,8 @@
 Scheduling Application for University of Massachusetts Dartmouth - Technical Services
+by Stephen Reilly
 
 Objectives:
-	+Store employee information
+	+ Store employee information
 		- Student ID
 		- Employee ID
 		- Name
@@ -36,6 +37,13 @@ Objectives:
 	+ Display Current Events
 		- Previous week's events
 		- Upcoming week's events
+			* Event Name
+			* Location
+			* Date
+			* Start Time
+			* End Time
+			* Number of Employees
+				° Manager
 	+ Create Meeting Invites
 		- Uses name of event
 		- Uses time of event

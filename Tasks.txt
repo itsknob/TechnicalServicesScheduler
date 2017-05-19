@@ -1,0 +1,8 @@
+Scheduling Application for University of Massachusetts Dartmouth - Technical Services
+by Stephen Reilly
+
+Tasks:
+	+ Create Database
+		- Tables
+	+ Create UpcomingEvents Class
+	+ Create PastEvent Class
