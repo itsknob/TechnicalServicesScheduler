@@ -5,6 +5,11 @@
  */
 package technicalservicesscheduler;
 
+import java.time.Duration;              //Used for getEventLength()
+import java.time.LocalTime;             //Used for getEventLength()
+import java.time.temporal.ChronoUnit;   //Used for getEventLength()
+import java.time.temporal.Temporal;
+
 /**
  *
  * @author Stephen Reilly
@@ -13,17 +18,18 @@ public class Event {
     /* Variables */
     
     //Variables for displaying
-    String eventName;
-    String eventLocation;
-    String eventDate;
-    String eventStartTime;
-    String eventEndTime;
-    int eventNumberEmployees;
-    boolean eventRequiresManager;
+    public String eventName;
+    public String eventLocation;
+    public String eventDate;
+    public String eventStartTime;
+    public String eventEndTime;
+    public int eventNumberEmployees;
+    public boolean eventRequiresManager;
     
     //Variables for Scheduling Events
-    String[] eventEmployeeList;
-    String eventManager;
+    public String[] eventEmployeeList;
+    public String eventManager;
+    public int eventLength;
     
     
     /* Methods */
@@ -103,18 +109,61 @@ public class Event {
      * IE 8:34pm would be formatted as "1634"
      * 
      */
+    /*
     public void getEventLength(){
-        String eventLength;
-        int start, end, length;
+        int start, end;
+        LocalTime startTime, endTime;
+        long hours, minutes;            //Used for interval of time.
+        LocalTime maxHours = LocalTime.of(24, 00);
         
         //Convert to Integers
         start = Integer.parseInt(this.getEventStartTime());
         end = Integer.parseInt(this.getEventEndTime());
         
-        //Time Subtraction
+        //Split into hours and minutes (1834 turns into 18, 34)
+        startTime = LocalTime.of(start/100, start % 100);
+        endTime = LocalTime.of(end/100, end % 100);
+        
+        //If event takes no time
+        if(start == end){
+            this.eventLength = 0;
+            return;
+        }
+        
+        //If event ends next day
+        if(end < start){    //IE start = 1634, end = 0230;
+            Duration startLength = Duration.between(startTime, maxHours);
+            Duration endLength = Duration.between(LocalTime.MIDNIGHT, endTime);
+            
+            Duration dur = startLength.addTo(endLength.getT);
+            
+            
+        
+            System.out.println(startLength);
+            System.out.println(endLength);
+            
+            long diff = startLength.getSeconds() - endLength.getSeconds();
+            System.out.println(diff);
+            
+            System.out.println(endLength.toHours() + startLength.toHours());
+        
+            this.eventLength = (maxHours - start) + end;
+            return;
+        }
 
-        //Convert to string - eventLength and return;
+        //Normal Event Hours (starts and ends same day)
+        Duration length = Duration.between(startTime, endTime);
+        System.out.println(length);
+        
+        hours = length.toHours();
+        minutes = length.minusHours(hours).toMinutes();
+        String convert = Long.toString(hours) + Long.toString(minutes);
+        
+        //Return value as integer. Fromatted: HHmm
+        this.eventLength = Integer.parseInt(convert);
+        
+        
     }
-    
+    */
     
 }
