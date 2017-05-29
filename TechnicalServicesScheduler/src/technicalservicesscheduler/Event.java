@@ -18,86 +18,101 @@ public class Event {
     /* Variables */
     
     //Variables for displaying
-    public String eventName;
-    public String eventLocation;
-    public String eventDate;
-    public String eventStartTime;
-    public String eventEndTime;
-    public int eventNumberEmployees;
-    public boolean eventRequiresManager;
+    private String eventName;
+    private String eventLocation;
+    private String eventDate;
+    private String eventStartTime;
+    private String eventEndTime;
+    private int eventNumberEmployees;
+    private boolean eventRequiresManager;
     
     //Variables for Scheduling Events
-    public String[] eventEmployeeList;
-    public String eventManager;
-    public int eventLength;
+    private String[] eventEmployeeList;
+    private String eventManager;
+    private int eventLength;
     
     
     /* Methods */
-    
-    /* Getters and Setters */
-    //Name
-    public void setEventName(String newName){
-        this.eventName = newName;
+
+    public String getEventName() {
+        return eventName;
     }
-    
-    public String getEventName(){
-        return this.eventName;
+
+    public void setEventName(String eventName) {
+        this.eventName = eventName;
     }
-    
-    //Location
-    public void setEventLocation(String newLocation){
-        this.eventLocation = newLocation;
+
+    public String getEventLocation() {
+        return eventLocation;
     }
-    
-    public String getEventLocation(){
-        return this.eventLocation;
+
+    public void setEventLocation(String eventLocation) {
+        this.eventLocation = eventLocation;
     }
-    
-    //Date
-    public void setEventDate(String newDate){
-        this.eventDate = newDate;
+
+    public String getEventDate() {
+        return eventDate;
     }
-    
-    public String getEventDate(){
-        return this.eventDate;
+
+    public void setEventDate(String eventDate) {
+        this.eventDate = eventDate;
     }
-    
-    //Start Time
-    public void setEventStartTime(String newStartTime){
-        this.eventStartTime = newStartTime;
+
+    public String getEventStartTime() {
+        return eventStartTime;
     }
-    
-    public String getEventStartTime(){
-        return this.eventStartTime;
+
+    public void setEventStartTime(String eventStartTime) {
+        this.eventStartTime = eventStartTime;
     }
-    
-    //End Time
-    public void setEventEndTime(String newEndTime){
-        this.eventEndTime = newEndTime;
+
+    public String getEventEndTime() {
+        return eventEndTime;
     }
-    
-    public String getEventEndTime(){
-        return this.eventEndTime;
+
+    public void setEventEndTime(String eventEndTime) {
+        this.eventEndTime = eventEndTime;
     }
-    
-    //Number of Employees
-    public void setEventNumberEmployees(int newNumberEmployees){
-        this.eventNumberEmployees = newNumberEmployees;
+
+    public int getEventNumberEmployees() {
+        return eventNumberEmployees;
     }
-    
-    public int getEventNumberEmployees(){
-        return this.eventNumberEmployees;
+
+    public void setEventNumberEmployees(int eventNumberEmployees) {
+        this.eventNumberEmployees = eventNumberEmployees;
     }
-    
-    //Requires Manager
-    public void setEventRequiresManager(boolean newRequiresManager){
-        this.eventRequiresManager = newRequiresManager;
+
+    public boolean isEventRequiresManager() {
+        return eventRequiresManager;
     }
-    
-    public boolean getEventRequiresManager(){
-        return this.eventRequiresManager;
+
+    public void setEventRequiresManager(boolean eventRequiresManager) {
+        this.eventRequiresManager = eventRequiresManager;
     }
-    
+
+    public String[] getEventEmployeeList() {
+        return eventEmployeeList;
+    }
+
+    public void setEventEmployeeList(String[] eventEmployeeList) {
+        this.eventEmployeeList = eventEmployeeList;
+    }
+
+    public String getEventManager() {
+        return eventManager;
+    }
+
+    public void setEventManager(String eventManager) {
+        this.eventManager = eventManager;
+    }
+
+    public int getEventLength() {
+        return eventLength;
+    }
+
+    public void setEventLength(int eventLength) {
+        this.eventLength = eventLength;
+    }
     
     /* Additional Methods */
 
